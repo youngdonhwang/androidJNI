@@ -12,6 +12,12 @@ public class User {
     private String mName;
     private double[] mTopScore;
 
+    public User(int mUserId, String mName) {
+        this.mUserId = mUserId;
+        this.mName = mName;
+        this.mTopScore = new double[10];
+    }
+
     public User(int mUserId, String mName, double[] mTopScore) {
         this.mUserId = mUserId;
         this.mName = mName;
@@ -22,7 +28,7 @@ public class User {
         this.executeUserNativeMethod();
     }
 
-    private String getUserInString() {
+    public String getUserInString() {
         return mUserId + " - " + mName;
     }
 
