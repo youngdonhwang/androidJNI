@@ -1,3 +1,0 @@
-D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/arm7Debug/armeabi-v7a/CMakeFiles/hello-jni.dir
-D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/arm7Debug/armeabi-v7a/CMakeFiles/edit_cache.dir
-D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/arm7Debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
