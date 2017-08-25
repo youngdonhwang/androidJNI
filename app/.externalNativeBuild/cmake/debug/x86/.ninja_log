@@ -1,0 +1,9 @@
+# ninja log v5
+0	477	0	CMakeFiles/hello-jni.dir/hello-jni.c.o	52689cd8282a142c
+478	631	0	D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/build/intermediates/cmake/debug/obj/x86/libhello-jni.so	6e7940bf9493c652
+1	205	0	CMakeFiles/app-utils.dir/app-utils.c.o	1191316be891fa34
+206	254	0	D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/build/intermediates/cmake/debug/obj/x86/libapp-utils.so	57bde3bed0a9363c
+44	1677	0	CMakeFiles/hello-jni.dir/hello-jni.c.o	52689cd8282a142c
+1677	2063	0	D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/build/intermediates/cmake/debug/obj/x86/libhello-jni.so	6e7940bf9493c652
+1	147	0	CMakeFiles/app-utils.dir/app-utils.c.o	1191316be891fa34
+147	196	0	D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/build/intermediates/cmake/debug/obj/x86/libapp-utils.so	57bde3bed0a9363c

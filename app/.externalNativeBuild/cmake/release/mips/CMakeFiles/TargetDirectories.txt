@@ -1,0 +1,4 @@
+D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/hello-jni.dir
+D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/app-utils.dir
+D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/edit_cache.dir
+D:/Projects/real-time-sticker/Source/android-ndk/hello-jni/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/rebuild_cache.dir
