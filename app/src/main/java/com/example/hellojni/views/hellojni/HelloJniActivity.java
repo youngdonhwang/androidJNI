@@ -33,6 +33,7 @@ public class HelloJniActivity extends AppCompatActivity implements HelloJniMvpVi
                 mPresenter.helloFromJni();
                 //mPresenter.performXyz();
                 mPresenter.modifyObject();
+                mPresenter.performCallbackFromC();
             }
         });
     }

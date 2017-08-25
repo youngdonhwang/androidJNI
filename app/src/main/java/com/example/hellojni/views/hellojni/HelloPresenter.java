@@ -1,5 +1,6 @@
 package com.example.hellojni.views.hellojni;
 
+import com.example.hellojni.models.User;
 import com.example.hellojni.views.base.BasePresenter;
 
 public class HelloPresenter extends BasePresenter<HelloJniMvpView> {
@@ -41,6 +42,11 @@ public class HelloPresenter extends BasePresenter<HelloJniMvpView> {
     void modifyObject() {
         modifyThisClass();
         getMvpView().showMessage("ID = " + mId + ", Message = " + mMessage);
+    }
+
+    void performCallbackFromC() {
+        User user = new User(123456, "Nguyen Van Tuan", new double[] {1, 2, 3, 4, 5});
+        user.performXyz();
     }
 
     /* This is another native method declaration that is *not*

@@ -16,14 +16,15 @@ Java_com_example_hellojni_views_hellojni_HelloPresenter_addInteger(JNIEnv *env,
 
 JNIEXPORT jdouble JNICALL
 Java_com_example_hellojni_views_hellojni_HelloPresenter_average(JNIEnv *env,
-                                           jobject this,
-                                           jint number1,
-                                           jint number2) {
+                                                                jobject this,
+                                                                jint number1,
+                                                                jint number2) {
     return (jdouble) ((number1 + number2) / 2.0);
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_example_hellojni_views_hellojni_HelloPresenter_reverseString(JNIEnv *env, jobject instance, jstring str_) {
+Java_com_example_hellojni_views_hellojni_HelloPresenter_reverseString(JNIEnv *env, jobject instance,
+                                                                      jstring str_) {
     char *str = (*env)->GetStringUTFChars(env, str_, 0);
     if (str == NULL) return (*env)->NewStringUTF(env, "ERROR: String is NULL");
 
@@ -42,7 +43,8 @@ Java_com_example_hellojni_views_hellojni_HelloPresenter_reverseString(JNIEnv *en
 }
 
 JNIEXPORT jdoubleArray JNICALL
-Java_com_example_hellojni_views_hellojni_HelloPresenter_sumAndAverage(JNIEnv *env, jobject instance, jintArray array_) {
+Java_com_example_hellojni_views_hellojni_HelloPresenter_sumAndAverage(JNIEnv *env, jobject instance,
+                                                                      jintArray array_) {
     jint *array = (*env)->GetIntArrayElements(env, array_, NULL);
     if (array == NULL) return NULL;
 
@@ -64,7 +66,8 @@ Java_com_example_hellojni_views_hellojni_HelloPresenter_sumAndAverage(JNIEnv *en
 }
 
 JNIEXPORT void JNICALL
-Java_com_example_hellojni_views_hellojni_HelloPresenter_modifyThisClass(JNIEnv *env, jobject helloActivity) {
+Java_com_example_hellojni_views_hellojni_HelloPresenter_modifyThisClass(JNIEnv *env,
+                                                                        jobject helloActivity) {
     jclass c_class = (*env)->GetObjectClass(env, helloActivity);
 
     // Get mId and mMessage field ID
@@ -84,3 +87,25 @@ Java_com_example_hellojni_views_hellojni_HelloPresenter_modifyThisClass(JNIEnv *
     if (mMessage != NULL)
         (*env)->SetObjectField(env, helloActivity, fidMessage, mMessage);
 }
+
+JNIEXPORT void JNICALL
+Java_com_example_hellojni_models_User_executeUserNativeMethod(JNIEnv *env, jobject userObj) {
+    // Get a class reference to user object
+    jclass userClass = (*env)->GetObjectClass(env, userObj);
+
+    jmethodID getUserInString = (*env)->GetMethodID(env, userClass, "getUserInString", "()Ljava/lang/String;");
+    jmethodID logUserInfo = (*env)->GetStaticMethodID(env, userClass, "logUserInfo", "(Ljava/lang/String;)V");
+    jmethodID getAverageScore = (*env)->GetMethodID(env, userClass, "getAverageScore", "()D");
+
+    if (getUserInString == NULL || logUserInfo == NULL || getAverageScore == NULL)
+        return;
+
+    jstring userInfo = (*env)->CallObjectMethod(env, userObj, getUserInString);
+    jdouble avgScore = (*env)->CallDoubleMethod(env, userObj, getAverageScore);
+    (*env)->CallStaticVoidMethod(env, userClass, logUserInfo, userInfo);
+}
+
+/*
+jstring appendDouble(JNIEnv *env, jstring str, jdouble value) {
+    ___CONCAT("", "");
+}*/
