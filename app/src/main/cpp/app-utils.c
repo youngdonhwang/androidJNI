@@ -81,7 +81,7 @@ Java_com_example_hellojni_views_hellojni_HelloPresenter_modifyThisClass(JNIEnv *
     jstring mMessage = (*env)->GetObjectField(env, helloActivity, fidMessage);
 
     // Update value
-    mId = 54321;
+    mId = 987654321;
     (*env)->SetIntField(env, helloActivity, fidId, mId);
     mMessage = (*env)->NewStringUTF(env, "Hello from JNI");
     if (mMessage != NULL)

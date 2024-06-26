@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import com.example.hellojni.R;
 
+//import com.example.hellojni.R;
+
 public class HelloJniActivity extends AppCompatActivity implements HelloJniMvpView {
 
     private HelloPresenter mPresenter;

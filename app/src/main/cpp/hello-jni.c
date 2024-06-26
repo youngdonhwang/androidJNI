@@ -27,5 +27,5 @@
  */
 JNIEXPORT jstring JNICALL
 Java_com_example_hellojni_views_hellojni_HelloPresenter_stringFromJNI(JNIEnv *env, jobject thiz) {
-    return (*env)->NewStringUTF(env, "Hello from JNI !  Compiled with ABI ");
+    return (*env)->NewStringUTF(env, "Hello from ydhwang' JNI !  Compiled with ABI ");
 }
